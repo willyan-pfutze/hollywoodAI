@@ -1,0 +1,376 @@
+/* Estilos gerais para o Hollywood AI */
+:root {
+  --color-black: #121212;
+  --color-gold: #D4AF37;
+  --color-white: #FFFFFF;
+  --color-blue: #6BA5C2;
+  --color-dark-gray: #1E1E1E;
+  --color-light-gray: #333333;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: var(--color-black);
+  border-bottom: 1px solid var(--color-gold);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: var(--color-gold);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Botões de autenticação */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-facebook {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Container principal */
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+/* Área de upload */
+.upload-area {
+  flex: 3;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-box {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 2px dashed var(--color-gold);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.upload-btn {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #b8971f;
+}
+
+/* Campo de prompt */
+.prompt-area {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.prompt-input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-dark-gray);
+  border: 1px solid var(--color-gold);
+  border-radius: 4px;
+  color: var(--color-white);
+  font-size: 1rem;
+}
+
+.prompt-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.prompt-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 12px;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prompt-btn:hover {
+  background-color: #b8971f;
+}
+
+/* Lista de tarefas */
+.tasks-area {
+  flex: 1;
+  padding: 2rem;
+  border-left: 1px solid var(--color-gold);
+  background-color: var(--color-dark-gray);
+}
+
+.tasks-title {
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-gold);
+  padding-bottom: 0.5rem;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-name {
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.task-status {
+  font-size: 0.9rem;
+  color: var(--color-gold);
+}
+
+.task-progress {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-light-gray);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.task-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.task-btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+/* Formulários de autenticação */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}
+
+.auth-form {
+  background-color: var(--color-dark-gray);
+  border: 1px solid var(--color-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-title {
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-gold);
+  border-radius: 4px;
+  color: var(--color-white);
+}
+
+.form-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form-submit:hover {
+  background-color: #b8971f;
+}
+
+.auth-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.auth-separator::before,
+.auth-separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--color-gold);
+}
+
+.auth-separator-text {
+  padding: 0 10px;
+  color: var(--color-gold);
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-link {
+  color: var(--color-gold);
+  text-align: center;
+  display: block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .tasks-area {
+    border-left: none;
+    border-top: 1px solid var(--color-gold);
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
